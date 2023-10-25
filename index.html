@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Tip Calculator</h1>
+    <div class="tipcont">
+        <div class="form">
+            <label for="">Customer Name:</label>
+            <input type="text" placeholder="Enter Customer Name" id="custID" onchange="changeName()">
+            <label for="">No. of People:</label>
+            <input type="text" placeholder="Enter No. of People's" id="people" onchange="changePeople()">
+
+            <div class="tipcontainer">
+                <p class="head">Select Tip %</p>
+                <div class="tipoptions">
+                    <p onclick="tippercenttoinput('1')">1%</p>
+                    <p onclick="tippercenttoinput('5')">5%</p>
+                    <p onclick="tippercenttoinput('10')">10%</p>
+                    <p onclick="tippercenttoinput('20')">20%</p>
+                </div>
+                <input type="number" placeholder="Enter customer Tip %" id="customTip" onchange="changeTip()">
+            </div>
+
+            <div class="additem">
+                <p>Add Item</p>
+                <div class="additemrow">
+                    <input type="text" placeholder="Enter Item Name" id="itemnameinput">
+                    <p class="empty"></p>
+                    <input type="number" placeholder="Enter Quantity of Item" id="itemqtyinput">
+                </div>
+                <input type="number" placeholder="Price of Item" id="itempriceinput">
+                <button onclick="addItem()">Add</button>
+            </div>
+        </div>
+        <div class="bill">
+            <div class="s1">
+                <label for="">Customer Name</label>
+                <p id="nameval">-</p>
+            </div>
+
+            <div class="s1">
+                <label for="">Number of People</label>
+                <p id="peopleval">-</p>
+            </div>
+
+            <div class="s2">
+                <h2>Items</h2>
+                <div id="allitems">
+                    <!-- <div class="s1">
+                        <p>3</p>
+                        <p>Shoes</p>
+                        <p>1000</p>
+                    </div>
+                    <div class="s1">
+                        <p>3</p>
+                        <p>Shirts</p>
+                        <p>1500</p>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="s1">
+                <p>Bill Amouunt</p>
+                <p id="billamt">-</p>
+            </div>
+
+            <div class="s1">
+                <p>Tip %</p>
+                <p id="tipval">-</p>
+            </div>
+
+            <div class="s1">
+                <p>Total Amount</p>
+                <p id="totalamt">-</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="script.js"></script>
+</html>
